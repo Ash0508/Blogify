@@ -4,6 +4,7 @@ const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const cookiePaser = require("cookie-parser");
+mongoose.set('strictQuery', true)
 
 const Blog = require("./models/blog");
 
@@ -17,9 +18,8 @@ const {
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then((e) => console.log("MongoDB Connected"));
+mongoose.connect('mongodb://127.0.0.1:27017/blogify').then((e)=>console.log("MongoDB Connected"))
+
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
