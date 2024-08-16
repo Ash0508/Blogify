@@ -37,16 +37,20 @@
       </form>
 
       <% } %>
-      <div class="mt-3">
+      <div>
         <% comments.forEach(comment => { %>
-        <div>
-          <img src="<%= comment.createdBy.profileImageURL %>" width="50px" />
-          <%= comment.createdBy.fullName %>
-          <pre><%= comment.content %></pre>
-        </div>
+          <div>
+            <% if (comment.createdBy && comment.createdBy.profileImageURL) { %>
+              <img src="<%= comment.createdBy.profileImageURL %>" width="50px" />
+            <% } else { %>
+              <img src="/path/to/default/image.png" width="50px" /> <!-- Optional fallback image -->
+            <% } %>
+            <%= comment.createdBy ? comment.createdBy.fullName : 'Anonymous' %>
+            <pre><%= comment.content %></pre>
+          </div>
         <% }) %>
       </div>
-    </div>
+      
 
     <%- include('./partials/scripts') %>
   </body>
