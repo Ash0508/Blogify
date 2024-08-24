@@ -1,4 +1,4 @@
-# Blogify 🚀
+# Blogify ⚙️
 
 **Blogify** is a full-stack application built with **Node.js**, **Express**, and **MongoDB**. It features user authentication, blog management, and file uploads, utilizing essential backend libraries like `multer` and `punycode`.
 
