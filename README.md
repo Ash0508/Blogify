@@ -9,12 +9,6 @@
 - **File Uploads 📁**: Seamless image uploads using `multer`.
 - **Responsive Design 📱💻**: Optimized for both desktop and mobile devices.
 
-## Topics Covered 🛠️
-
-- **Mental Health Chatbots 🧠**
-- **Constraint Satisfaction Problems (CSP) 🧩**
-- **Personal Portfolio Websites 🌐**
-
 ## Screenshots 📸
 
 ### Homepage
